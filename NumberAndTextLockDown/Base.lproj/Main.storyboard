@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NumberAndTextLockDown" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,93 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter zipcode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uos-Un-Hqe">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Show me the money honey!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SW3-AC-3fZ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-va-B3N">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click switch to unlock me" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-dD-7ry">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803928136825562" green="0.90980398654937744" blue="0.97254908084869385" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="wJP-va-B3N" firstAttribute="leading" secondItem="xM7-dD-7ry" secondAttribute="trailing" constant="29" id="0Zj-tK-pos"/>
+                            <constraint firstItem="xM7-dD-7ry" firstAttribute="top" secondItem="SW3-AC-3fZ" secondAttribute="bottom" constant="31" id="162-Gz-aXr"/>
+                            <constraint firstItem="SW3-AC-3fZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Cua-Rh-WDG"/>
+                            <constraint firstItem="SW3-AC-3fZ" firstAttribute="leading" secondItem="uos-Un-Hqe" secondAttribute="leading" id="FfA-qQ-U1Q"/>
+                            <constraint firstItem="SW3-AC-3fZ" firstAttribute="top" secondItem="uos-Un-Hqe" secondAttribute="bottom" constant="20" id="I2c-F7-Zzv"/>
+                            <constraint firstItem="uos-Un-Hqe" firstAttribute="trailing" secondItem="SW3-AC-3fZ" secondAttribute="trailing" id="L5f-yT-K0K"/>
+                            <constraint firstItem="SW3-AC-3fZ" firstAttribute="trailing" secondItem="wJP-va-B3N" secondAttribute="trailing" id="XAJ-TM-9j9"/>
+                            <constraint firstItem="wJP-va-B3N" firstAttribute="top" secondItem="xM7-dD-7ry" secondAttribute="top" id="jNw-F2-yW1"/>
+                            <constraint firstItem="uos-Un-Hqe" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pFT-3M-lly"/>
+                            <constraint firstItem="uos-Un-Hqe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="t9H-ng-ugh"/>
+                            <constraint firstItem="SW3-AC-3fZ" firstAttribute="leading" secondItem="xM7-dD-7ry" secondAttribute="leading" id="tUj-2t-mQb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uos-Un-Hqe"/>
+                                <exclude reference="SW3-AC-3fZ"/>
+                                <exclude reference="wJP-va-B3N"/>
+                                <exclude reference="xM7-dD-7ry"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="L5f-yT-K0K"/>
+                                <exclude reference="pFT-3M-lly"/>
+                                <exclude reference="t9H-ng-ugh"/>
+                                <exclude reference="Cua-Rh-WDG"/>
+                                <exclude reference="FfA-qQ-U1Q"/>
+                                <exclude reference="I2c-F7-Zzv"/>
+                                <exclude reference="XAJ-TM-9j9"/>
+                                <exclude reference="tUj-2t-mQb"/>
+                                <exclude reference="162-Gz-aXr"/>
+                                <exclude reference="0Zj-tK-pos"/>
+                                <exclude reference="jNw-F2-yW1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uos-Un-Hqe"/>
+                                <include reference="SW3-AC-3fZ"/>
+                                <include reference="wJP-va-B3N"/>
+                                <include reference="xM7-dD-7ry"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="L5f-yT-K0K"/>
+                                <include reference="pFT-3M-lly"/>
+                                <include reference="t9H-ng-ugh"/>
+                                <include reference="Cua-Rh-WDG"/>
+                                <include reference="FfA-qQ-U1Q"/>
+                                <include reference="I2c-F7-Zzv"/>
+                                <include reference="XAJ-TM-9j9"/>
+                                <include reference="tUj-2t-mQb"/>
+                                <include reference="162-Gz-aXr"/>
+                                <include reference="0Zj-tK-pos"/>
+                                <include reference="jNw-F2-yW1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="lockedText" destination="xM7-dD-7ry" id="EOb-Se-9iP"/>
+                        <outlet property="showMoney" destination="SW3-AC-3fZ" id="2TZ-Mu-CqP"/>
+                        <outlet property="unlockText" destination="wJP-va-B3N" id="UNb-oK-HDd"/>
+                        <outlet property="zipCode" destination="uos-Un-Hqe" id="uBP-fw-CGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="380"/>
         </scene>
     </scenes>
 </document>
