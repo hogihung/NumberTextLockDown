@@ -10,10 +10,15 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    // Our outlets - text fields and switch from storyboard
     @IBOutlet weak var zipCode: UITextField!
     @IBOutlet weak var showMoney: UITextField!
     @IBOutlet weak var lockedText: UITextField!
     @IBOutlet weak var unlockText: UISwitch!
+    
+    // Our text field delegate objects
+    let zipCodeDelegate   = ZipCodeFieldDelegate()
+    let showMoneyDelegate = ShowMoneyFieldDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +30,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         unlockText.on = false
         
         // Our delegated fields
-        self.zipCode.delegate = self
-        self.showMoney.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.zipCode.delegate = zipCodeDelegate
+        self.showMoney.delegate = showMoneyDelegate
+        self.lockedText.delegate = self
     }
     
-    // zipCode text box should only allows numbers with a 
-    // max number of 5 total numbers.
-    
-    // showMoney should allow the user to type dollar value
-    // then cents
-
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        // local delegate for our unlockText field
+        return true
+    }
     
     @IBAction func toggleUnlockText(sender: UISwitch) {
         println("SwitchState: \(sender.on)")
@@ -49,6 +48,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             lockedText.enabled = false
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 }

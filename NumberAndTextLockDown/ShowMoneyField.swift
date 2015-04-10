@@ -9,6 +9,15 @@
 import Foundation
 import UIKit
 
-class ShowMoneyFieldDelegate {
-    //
+class ShowMoneyFieldDelegate : NSObject, UITextFieldDelegate {
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        // need code here to convert digits entered into currency
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.text = ""
+    }
+
 }
