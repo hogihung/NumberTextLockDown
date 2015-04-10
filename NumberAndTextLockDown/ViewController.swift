@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var zipCode: UITextField!
     @IBOutlet weak var showMoney: UITextField!
@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         
         // Let's turn the switch off on load
         unlockText.on = false
+        
+        // Our delegated fields
+        self.zipCode.delegate = self
+        self.showMoney.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,5 +50,5 @@ class ViewController: UIViewController {
             lockedText.enabled = false
         }
     }
+    
 }
-

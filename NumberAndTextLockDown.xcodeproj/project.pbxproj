@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		1647CE671AD3569A0078BEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647CE661AD3569A0078BEFC /* AppDelegate.swift */; };
 		1647CE691AD3569A0078BEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647CE681AD3569A0078BEFC /* ViewController.swift */; };
-		1647CE6C1AD3569A0078BEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1647CE6A1AD3569A0078BEFC /* Main.storyboard */; };
 		1647CE6E1AD3569A0078BEFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1647CE6D1AD3569A0078BEFC /* Images.xcassets */; };
 		1647CE711AD3569A0078BEFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1647CE6F1AD3569A0078BEFC /* LaunchScreen.xib */; };
 		1647CE7D1AD3569A0078BEFC /* NumberAndTextLockDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647CE7C1AD3569A0078BEFC /* NumberAndTextLockDownTests.swift */; };
+		1647CE861AD738520078BEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1647CE6A1AD3569A0078BEFC /* Main.storyboard */; };
+		1647CE881AD73B7B0078BEFC /* ZipCodeFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647CE871AD73B7B0078BEFC /* ZipCodeFieldDelegate.swift */; };
+		1647CE8A1AD73B900078BEFC /* ShowMoneyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647CE891AD73B900078BEFC /* ShowMoneyField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		1647CE761AD3569A0078BEFC /* NumberAndTextLockDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberAndTextLockDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1647CE7B1AD3569A0078BEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1647CE7C1AD3569A0078BEFC /* NumberAndTextLockDownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndTextLockDownTests.swift; sourceTree = "<group>"; };
+		1647CE871AD73B7B0078BEFC /* ZipCodeFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeFieldDelegate.swift; sourceTree = "<group>"; };
+		1647CE891AD73B900078BEFC /* ShowMoneyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMoneyField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				1647CE661AD3569A0078BEFC /* AppDelegate.swift */,
 				1647CE681AD3569A0078BEFC /* ViewController.swift */,
 				1647CE6A1AD3569A0078BEFC /* Main.storyboard */,
+				1647CE871AD73B7B0078BEFC /* ZipCodeFieldDelegate.swift */,
+				1647CE891AD73B900078BEFC /* ShowMoneyField.swift */,
 				1647CE6D1AD3569A0078BEFC /* Images.xcassets */,
 				1647CE6F1AD3569A0078BEFC /* LaunchScreen.xib */,
 				1647CE641AD3569A0078BEFC /* Supporting Files */,
@@ -192,7 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1647CE6C1AD3569A0078BEFC /* Main.storyboard in Resources */,
+				1647CE861AD738520078BEFC /* Main.storyboard in Resources */,
 				1647CE711AD3569A0078BEFC /* LaunchScreen.xib in Resources */,
 				1647CE6E1AD3569A0078BEFC /* Images.xcassets in Resources */,
 			);
@@ -212,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1647CE8A1AD73B900078BEFC /* ShowMoneyField.swift in Sources */,
+				1647CE881AD73B7B0078BEFC /* ZipCodeFieldDelegate.swift in Sources */,
 				1647CE691AD3569A0078BEFC /* ViewController.swift in Sources */,
 				1647CE671AD3569A0078BEFC /* AppDelegate.swift in Sources */,
 			);
