@@ -12,12 +12,16 @@ import UIKit
 class ZipCodeFieldDelegate : NSObject, UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        // need code here to limit/format input to a zip code format
+        textField.text = trimToFive(textField.text);
         return true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
+    func trimToFive(string: String)->String {
+        var coccoaString = string as NSString;
+        if(coccoaString.length > 4) {
+            return coccoaString.substringToIndex(4);
+        }
+        return string;
     }
-    
+
 }
